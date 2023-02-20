@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7982597205291086641
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7982597205291086643}
+  - component: {fileID: 7982597205291086642}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7982597205291086643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982597205291086641}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7982597205291086642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7982597205291086641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfdbfdfe8950374a93a147ade7943eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenEarlyGameEnemiesSpawns: 5
+  timeBetweenMidGameEnemiesSpawns: 10
+  timeBetweenLateGameEnemiesSpawns: 15
+  earlyGameEnemies:
+  - {fileID: 4218712588883033643, guid: 6c618f37ae1c5964795f181a5a81caf3, type: 3}
+  - {fileID: 4082797269887551794, guid: 986fe79eb0d5cf64294433a48bd09d90, type: 3}
+  - {fileID: 6057473010593624065, guid: e723bf438a6163d40a5fd158882eca2c, type: 3}
+  - {fileID: 2768455489745339099, guid: 694825f832e78314ea8ee91dec300403, type: 3}
+  midGameEnemies:
+  - {fileID: 5247741068856585065, guid: e6aad1e36e9b5fb47a7c5192e2642f9a, type: 3}
+  - {fileID: 906340981606125121, guid: c2b46f19545758b4ea7e3be6f1a39028, type: 3}
+  - {fileID: 1148298895598516019, guid: 66705871d9e03e74c87f629e1c52c484, type: 3}
+  lateGameEnemies:
+  - {fileID: 3962332750182158917, guid: 0573d6cef619eff4b82a6aad2603b5e3, type: 3}
+  - {fileID: 904956071992969736, guid: 37799c1b4aa46f646acb870646cdd08e, type: 3}
+  requiredLevelToSpawnMidGameEnemies: 3
+  requiredLevelToSpawnLateGameEnemies: 5
+  timeToReduceBetweenEnemiesSpawns: 0.15
+  playerHealth: {fileID: 0}
+  spawnPositionOnTopSideYOffset: 150
+  spawnPositionOnBottomSideYOffset: 700
+  spawnPositionOnLeftAndRightSideXOffset: 600
+  spawnLayerIndex: 6
+  numberOfSpawnPositionsOnEachSide: 10
+  canSpawnMidGameEnemies: 0
+  canSpawnLateGameEnemies: 0

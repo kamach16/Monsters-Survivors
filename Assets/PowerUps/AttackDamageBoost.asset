@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c073f146d7f8e9645a23d3f0348926e0, type: 3}
+  m_Name: AttackDamageBoost
+  m_EditorClassIdentifier: 
+  powerUpType: 1
+  powerUpName: Attack damage boost
+  description: Gives you bonus attack damage
+  artwork: {fileID: 2050260403, guid: 8ea03091a60421d4e8862c4661a943e8, type: 3}
