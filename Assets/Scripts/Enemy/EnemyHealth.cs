@@ -9,13 +9,13 @@ namespace Enemy
         [SerializeField] private float currentHealth;
         [SerializeField] private float xpToGain;
         [SerializeField] private float scoreToGain;
+        [SerializeField] private HealthDisplay healthDisplay;
 
         [Header("Hit Effect")]
         [SerializeField] private ParticleSystem hitVFX;
 
         private PlayerWeapon playerWeapon;
         private XPManager xpManager;
-        private HealthDisplay healthDisplay;
         private ScoreManager scoreManager;
 
         private void Awake()

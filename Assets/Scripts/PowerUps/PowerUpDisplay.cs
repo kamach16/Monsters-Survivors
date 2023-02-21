@@ -22,7 +22,6 @@ public class PowerUpDisplay : MonoBehaviour
     private void SetPowerUp()
     {
         PowerUp powerUpToRemove = PowerUpToRemove();
-        print(powerUpToRemove);
         allPowerUpsAvailable.Remove(powerUpToRemove);
 
         PowerUp powerUpToSet = allPowerUpsAvailable[Random.Range(0, allPowerUpsAvailable.Count)];
