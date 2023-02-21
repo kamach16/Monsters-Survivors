@@ -8,13 +8,15 @@ namespace Enemy
         [SerializeField] private float maxHealth;
         [SerializeField] private float currentHealth;
         [SerializeField] private float xpToGain;
-        [SerializeField] private HealthDisplay healthDisplay;
+        [SerializeField] private float scoreToGain;
 
         [Header("Hit Effect")]
         [SerializeField] private ParticleSystem hitVFX;
 
         private PlayerWeapon playerWeapon;
         private XPManager xpManager;
+        private HealthDisplay healthDisplay;
+        private ScoreManager scoreManager;
 
         private void Awake()
         {
@@ -25,6 +27,7 @@ namespace Enemy
         {
             playerWeapon = FindObjectOfType<PlayerWeapon>();
             xpManager = FindObjectOfType<XPManager>();
+            scoreManager = FindObjectOfType<ScoreManager>();
             healthDisplay.UpdateHealth(currentHealth, maxHealth);
         }
 
@@ -48,6 +51,7 @@ namespace Enemy
             if (currentHealth <= 0)
             {
                 xpManager.GainXP(xpToGain);
+                scoreManager.GainScore(scoreToGain);
                 Destroy(gameObject);
             }
         }
