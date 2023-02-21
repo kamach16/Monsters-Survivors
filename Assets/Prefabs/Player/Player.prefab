@@ -1123,6 +1123,7 @@ MonoBehaviour:
   currentHealth: 100
   hitVFX: {fileID: 2984883245429483787}
   healthDisplay: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!1 &3639246539127833945
 GameObject:
   m_ObjectHideFlags: 0

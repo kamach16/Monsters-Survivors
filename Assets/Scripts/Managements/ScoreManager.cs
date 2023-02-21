@@ -12,6 +12,11 @@ public class ScoreManager : MonoBehaviour
         scoreDisplay.UpdateScore(0);
     }
 
+    public float GetCurrentScore()
+    {
+        return currentScore;
+    }
+
     public void GainScore(float scoreToGain)
     {
         currentScore += scoreToGain;

@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DeathScreenDisplay : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject scoreDisplayDuringPlaying;
+    [SerializeField] private TextMeshProUGUI scoreDisplayInDeathScreen;
+    [SerializeField] private ScoreManager scoreManager;
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        scoreDisplayDuringPlaying.SetActive(false);
+        scoreDisplayInDeathScreen.text = scoreManager.GetCurrentScore().ToString();
     }
 }

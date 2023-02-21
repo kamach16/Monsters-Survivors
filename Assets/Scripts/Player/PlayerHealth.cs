@@ -14,6 +14,7 @@ namespace Player
         [SerializeField] private ParticleSystem hitVFX;
 
         [SerializeField] private HealthDisplay healthDisplay;
+        [SerializeField] private GameManager gameManager;
 
         private Animator animator;
 
@@ -80,6 +81,7 @@ namespace Player
             {
                 isDead = true;
                 animator.SetTrigger("die");
+                gameManager.ShowDeathScreen();
             }
         }
     }

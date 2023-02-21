@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Texture2D cursorTexture;
     [SerializeField] private Image fade;
+    [SerializeField] private GameObject deathScreen;
 
     private void Start()
     {
@@ -28,5 +29,10 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0;
         fade.gameObject.SetActive(true);
+    }
+
+    public void ShowDeathScreen()
+    {
+        deathScreen.SetActive(true);
     }
 }
