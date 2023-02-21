@@ -80913,10 +80913,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 181065750, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181065750, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 181065750, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 66.40338
+      objectReference: {fileID: 0}
+    - target: {fileID: 181065750, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 253
+      objectReference: {fileID: 0}
+    - target: {fileID: 198432913, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -433
+      objectReference: {fileID: 0}
+    - target: {fileID: 646269922, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 646269922, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 646269922, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 362
+      objectReference: {fileID: 0}
     - target: {fileID: 898762492, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: powerUpsManager
       value: 
       objectReference: {fileID: 2131852626}
+    - target: {fileID: 1361211975, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -433
+      objectReference: {fileID: 0}
     - target: {fileID: 1480211611, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: powerUpsManager
       value: 
@@ -80925,6 +80961,14 @@ PrefabInstance:
       propertyPath: powerUpsManager
       value: 
       objectReference: {fileID: 2131852626}
+    - target: {fileID: 178437315082385820, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -218
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473396944457707388, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -236
+      objectReference: {fileID: 0}
     - target: {fileID: 6532376950632071634, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
