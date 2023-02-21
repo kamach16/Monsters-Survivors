@@ -18316,11 +18316,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2768455489745339096, guid: 694825f832e78314ea8ee91dec300403, type: 3}
       propertyPath: moveSpeed
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2768455489745339099, guid: 694825f832e78314ea8ee91dec300403, type: 3}
       propertyPath: m_Name
       value: SpiderEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768455489745339099, guid: 694825f832e78314ea8ee91dec300403, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3251694816113727585, guid: 694825f832e78314ea8ee91dec300403, type: 3}
       propertyPath: m_RootOrder
@@ -22576,6 +22580,10 @@ PrefabInstance:
     - target: {fileID: 6057473010593624065, guid: e723bf438a6163d40a5fd158882eca2c, type: 3}
       propertyPath: m_Name
       value: SkeletonEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6057473010593624065, guid: e723bf438a6163d40a5fd158882eca2c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6871269512797399739, guid: e723bf438a6163d40a5fd158882eca2c, type: 3}
       propertyPath: m_RootOrder
@@ -41673,11 +41681,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2768455489745339096, guid: 694825f832e78314ea8ee91dec300403, type: 3}
       propertyPath: moveSpeed
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2768455489745339099, guid: 694825f832e78314ea8ee91dec300403, type: 3}
       propertyPath: m_Name
       value: SpiderEnemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768455489745339099, guid: 694825f832e78314ea8ee91dec300403, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3251694816113727585, guid: 694825f832e78314ea8ee91dec300403, type: 3}
       propertyPath: m_RootOrder
@@ -56003,31 +56015,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8377151309574368355, guid: 2554008d6447a2540b44e55f0c0b576e, type: 3}
   m_PrefabInstance: {fileID: 1467821417}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1468181774 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1655198461203172, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-  m_PrefabInstance: {fileID: 6532376952524228553}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1468181778
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1468181774}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b5a3f5cb960b8804b874176121421c5d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1470796953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81193,13 +81180,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 181065751, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.a
-      value: 0.7294118
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2070877090}
     - target: {fileID: 646269923, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.a
-      value: 0.7294118
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2070877090}
     - target: {fileID: 898762492, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: powerUpsManager
       value: 
@@ -81212,22 +81199,6 @@ PrefabInstance:
       propertyPath: powerUpsManager
       value: 
       objectReference: {fileID: 2131852626}
-    - target: {fileID: 178437315082385820, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 178437315082385820, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 178437315082385820, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 178437315082385820, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6532376950632071634, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -81331,10 +81302,6 @@ PrefabInstance:
     - target: {fileID: 6532376952603707280, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7861552199070038553, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33543c73ba2897546820716286ff5ddd, type: 3}

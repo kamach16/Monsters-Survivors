@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -22,17 +23,34 @@ public class GameManager : MonoBehaviour
     public void ResumeGame()
     {
         Time.timeScale = 1;
-        fade.gameObject.SetActive(false);
+        Fade(false);
     }
 
     public void StopGame()
     {
         Time.timeScale = 0;
-        fade.gameObject.SetActive(true);
+        Fade(true);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void PlayAgain()
+    {
+        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(sceneIndex);
+    }
+
+    private void Fade(bool isFadingIn)
+    {
+        fade.gameObject.SetActive(isFadingIn);
     }
 
     public void ShowDeathScreen()
     {
         deathScreen.SetActive(true);
+        Fade(true);
     }
 }
