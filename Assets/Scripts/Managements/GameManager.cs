@@ -22,14 +22,19 @@ public class GameManager : MonoBehaviour
 
     public void ResumeGame()
     {
-        Time.timeScale = 1;
+        ChangeTimeScale(1);
         Fade(false);
     }
 
     public void StopGame()
     {
-        Time.timeScale = 0;
+        ChangeTimeScale(0);
         Fade(true);
+    }
+
+    private void ChangeTimeScale(float newTimeScale)
+    {
+        Time.timeScale = newTimeScale;
     }
 
     public void QuitGame()
