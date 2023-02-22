@@ -8,12 +8,33 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private Texture2D cursorTexture;
     [SerializeField] private Image fade;
+    [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private GameObject deathScreen;
-    [SerializeField] private GameObject mainMenuScreen;
+    [SerializeField] private GameObject pauseScreen;
+
+    [HideInInspector] bool gamePaused = false;
+
+    private bool canPauseGameByESC = true;
 
     private void Start()
     {
         SetCursor();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B)) PlayerPrefs.DeleteAll();
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (canPauseGameByESC) PauseGame(pauseScreen);
+            else ResumeGame(pauseScreen);
+        }
+    }
+
+    public bool GetGamePaused()
+    {
+        return gamePaused;
     }
 
     private void SetCursor()
@@ -21,17 +42,24 @@ public class GameManager : MonoBehaviour
         Cursor.SetCursor(cursorTexture, new Vector2(250, 250), CursorMode.Auto);
     }
 
-    public void ResumeGame()
+    public void ResumeGame(GameObject contentToHide)
     {
         ChangeTimeScale(1);
         Fade(false);
+        contentToHide.SetActive(false);
+        canPauseGameByESC = true;
+        gamePaused = false;
     }
 
     public void PauseGame(GameObject contentToShow)
     {
+        if (contentToShow == null) return;
+        
         ChangeTimeScale(0);
         Fade(true);
         contentToShow.SetActive(true);
+        canPauseGameByESC = false;
+        gamePaused = true;
     }
 
     private void ChangeTimeScale(float newTimeScale)
@@ -46,14 +74,19 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        int gameplaySceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        int gameplaySceneIndex = ActiveSceneIndex() + 1;
         SceneManager.LoadScene(gameplaySceneIndex);
     }
 
     public void PlayAgain()
     {
-        int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(sceneIndex);
+        SceneManager.LoadScene(ActiveSceneIndex());
+        canPauseGameByESC = true;
+    }
+
+    private int ActiveSceneIndex()
+    {
+        return SceneManager.GetActiveScene().buildIndex;
     }
 
     private void Fade(bool isFadingIn)
@@ -65,5 +98,7 @@ public class GameManager : MonoBehaviour
     {
         deathScreen.SetActive(true);
         Fade(true);
+        canPauseGameByESC = false;
+        PlayerPrefs.SetFloat("maxScore", scoreManager.GetMaxScore());
     }
 }

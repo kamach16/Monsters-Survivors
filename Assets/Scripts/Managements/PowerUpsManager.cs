@@ -85,8 +85,7 @@ public class PowerUpsManager : MonoBehaviour
 
     public void AddPowerUp(PowerUpType powerUpType)
     {
-        powerUpsContainer.SetActive(false);
-        gameManager.ResumeGame();
+        gameManager.ResumeGame(powerUpsContainer);
         levelUpEffect.Play();
 
         switch (powerUpType)

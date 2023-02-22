@@ -1295,6 +1295,7 @@ MonoBehaviour:
   maxHealth: 300
   currentHealth: 300
   xpToGain: 60
+  scoreToGain: 150
   healthDisplay: {fileID: 1516478304}
   hitVFX: {fileID: 4301478239723333748}
 --- !u!114 &-4353559993235221450

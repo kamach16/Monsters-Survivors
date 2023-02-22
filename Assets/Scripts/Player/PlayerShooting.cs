@@ -6,6 +6,7 @@ namespace Player
     {
         [SerializeField] public PlayerWeapon currentWeapon;
         [SerializeField] private PlayerHealth playerHealth;
+        [SerializeField] private GameManager gameManager;
 
         private void Update()
         {
@@ -25,7 +26,7 @@ namespace Player
                 return;
             }
 
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButtonDown("Fire1") && !gameManager.GetGamePaused())
             {
                 currentWeapon.StartShooting();
             }

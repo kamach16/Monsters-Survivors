@@ -1106,6 +1106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentWeapon: {fileID: 6948006487884306393}
   playerHealth: {fileID: 2535708990439270885}
+  gameManager: {fileID: 0}
 --- !u!114 &2535708990439270885
 MonoBehaviour:
   m_ObjectHideFlags: 0

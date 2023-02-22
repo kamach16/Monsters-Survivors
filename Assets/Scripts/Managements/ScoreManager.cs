@@ -5,11 +5,14 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] public float currentScore;
+    [SerializeField] public float maxScore;
     [SerializeField] private ScoreDisplay scoreDisplay;
 
     private void Awake()
     {
-        scoreDisplay.UpdateScore(0);
+        maxScore = PlayerPrefs.GetFloat("maxScore");
+
+        if (scoreDisplay != null) scoreDisplay.UpdateScore(0);
     }
 
     public float GetCurrentScore()
@@ -17,9 +20,20 @@ public class ScoreManager : MonoBehaviour
         return currentScore;
     }
 
+    public float GetMaxScore()
+    {
+        return maxScore;
+    }
+
     public void GainScore(float scoreToGain)
     {
         currentScore += scoreToGain;
+
+        if (currentScore > maxScore)
+        {
+            maxScore = currentScore;
+        }
+
         UpdateScore();
     }
 
