@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Texture2D cursorTexture;
     [SerializeField] private Image fade;
     [SerializeField] private GameObject deathScreen;
+    [SerializeField] private GameObject mainMenuScreen;
 
     private void Start()
     {
@@ -40,6 +41,13 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void PlayGame()
+    {
+        mainMenuScreen.SetActive(false);
+        Fade(false);
+        ChangeTimeScale(1);
     }
 
     public void PlayAgain()
