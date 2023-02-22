@@ -47,8 +47,7 @@ public class XPManager : MonoBehaviour
 
     private void LevelUp()
     {
-        gameManager.StopGame();
-        powerUpsContainer.SetActive(true);
+        gameManager.PauseGame(powerUpsContainer);
         currentLvl++;
         UpdateEnemySpawnerValues();
     }

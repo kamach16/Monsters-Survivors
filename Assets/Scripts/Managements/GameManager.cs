@@ -27,10 +27,11 @@ public class GameManager : MonoBehaviour
         Fade(false);
     }
 
-    public void StopGame()
+    public void PauseGame(GameObject contentToShow)
     {
         ChangeTimeScale(0);
         Fade(true);
+        contentToShow.SetActive(true);
     }
 
     private void ChangeTimeScale(float newTimeScale)
@@ -45,9 +46,8 @@ public class GameManager : MonoBehaviour
 
     public void PlayGame()
     {
-        mainMenuScreen.SetActive(false);
-        Fade(false);
-        ChangeTimeScale(1);
+        int gameplaySceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(gameplaySceneIndex);
     }
 
     public void PlayAgain()

@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: f9d12590215760843891ba3819107c8a, type: 2}
   m_LightingSettings: {fileID: 1088719112}
 --- !u!196 &4
 NavMeshSettings:
@@ -27425,7 +27425,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -9.370544}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -35862,11 +35862,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2685705423253822111, guid: d3ee913ed32937344b0587e70dc777a2, type: 3}
   m_PrefabInstance: {fileID: 934406831}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &938089593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 938089593, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-  m_PrefabInstance: {fileID: 6532376952524228553}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &938375167
 PrefabInstance:
@@ -81192,15 +81187,7 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 69212659, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2070877090}
     - target: {fileID: 181065751, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 2070877090}
-    - target: {fileID: 256598226, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2070877090}
@@ -81408,7 +81395,7 @@ PrefabInstance:
     - target: {fileID: 6827695451534103866, guid: 2cfa90d5008ac63418cb1364f7c4a69a, type: 3}
       propertyPath: mainMenuScreen
       value: 
-      objectReference: {fileID: 938089593}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cfa90d5008ac63418cb1364f7c4a69a, type: 3}
 --- !u!1001 &7891359754487704098
