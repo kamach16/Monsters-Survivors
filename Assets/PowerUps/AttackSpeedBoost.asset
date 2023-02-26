@@ -15,4 +15,4 @@ MonoBehaviour:
   powerUpType: 0
   powerUpName: Attack speed boost
   description: Gives you bonus attack speed
-  artwork: {fileID: 2050260403, guid: 8ea03091a60421d4e8862c4661a943e8, type: 3}
+  artwork: {fileID: 21300000, guid: e54b54092133b8343af2d3c074822f06, type: 3}

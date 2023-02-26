@@ -15,4 +15,4 @@ MonoBehaviour:
   powerUpType: 4
   powerUpName: XP multipler
   description: Gives you bonus XP
-  artwork: {fileID: 2050260403, guid: 8ea03091a60421d4e8862c4661a943e8, type: 3}
+  artwork: {fileID: 21300000, guid: ecf81df6a82844342807a1ec17c2ffb3, type: 3}

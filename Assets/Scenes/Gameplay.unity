@@ -81005,6 +81005,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 146732545, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a7e3fe2c5b70d2348a67f761dec24243, type: 3}
     - target: {fileID: 181065751, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -81013,6 +81017,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2070877090}
+    - target: {fileID: 641629571, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e54b54092133b8343af2d3c074822f06, type: 3}
     - target: {fileID: 646269923, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -81033,6 +81041,14 @@ PrefabInstance:
       propertyPath: powerUpsManager
       value: 
       objectReference: {fileID: 2131852626}
+    - target: {fileID: 1911686181, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e34fb002959c9248b138f13783d8372, type: 3}
+    - target: {fileID: 2649081149629732913, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6532376950632071634, guid: 33543c73ba2897546820716286ff5ddd, type: 3}
       propertyPath: m_Pivot.x
       value: 0

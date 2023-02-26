@@ -15,4 +15,4 @@ MonoBehaviour:
   powerUpType: 1
   powerUpName: Attack damage boost
   description: Gives you bonus attack damage
-  artwork: {fileID: 2050260403, guid: 8ea03091a60421d4e8862c4661a943e8, type: 3}
+  artwork: {fileID: 21300000, guid: 9e39a451d020b074baec7c8986802ac0, type: 3}
