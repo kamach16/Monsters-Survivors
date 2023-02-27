@@ -7,6 +7,7 @@ public class XPManager : MonoBehaviour
     [SerializeField] private int currentLvl;
     [SerializeField] public float currentXP;
     [SerializeField] public float xpToLevelUp;
+    [SerializeField] public float xpToAddToTheXpToLevelUp;
     [SerializeField] private XPDisplay xpDisplay;
     [SerializeField] private GameObject powerUpsContainer;
     [SerializeField] private GameManager gameManager;
@@ -50,6 +51,8 @@ public class XPManager : MonoBehaviour
         gameManager.PauseGame(powerUpsContainer);
         currentLvl++;
         UpdateEnemySpawnerValues();
+        gameManager.SetPowerUpsContainerShowed(true);
+        xpToLevelUp += xpToAddToTheXpToLevelUp;
     }
 
     private void UpdateEnemySpawnerValues()

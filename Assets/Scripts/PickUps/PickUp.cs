@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
+using Audio;
 
 public class PickUp : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class PickUp : MonoBehaviour
     [SerializeField] private float timeToActive;
     [SerializeField] private GameObject model;
     [SerializeField] private ParticleSystem pickUpEffect;
+    [SerializeField] private ObjectAudio objectAudio;
 
     private float timeSinceDeactivate;
     private bool isActive = true;
@@ -50,6 +52,7 @@ public class PickUp : MonoBehaviour
                 model.SetActive(false);
                 isActive = false;
                 pickUpEffect.Play();
+                objectAudio.PlayHPGainedSound();
                 break;
 
             default:

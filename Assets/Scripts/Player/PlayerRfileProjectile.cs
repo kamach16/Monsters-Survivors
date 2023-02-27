@@ -74,7 +74,6 @@ public class PlayerRfileProjectile : MonoBehaviour
                     break;
                 }
             }
-            print("bounce");
             RotateToEnemy(nearbyEnemy.position);
             bounciesAmount++;
         }

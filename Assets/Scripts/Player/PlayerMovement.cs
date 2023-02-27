@@ -65,7 +65,7 @@ namespace Player
         private void AnimatePlayer(float horizontalInput, float verticalInput)
         {
             if (horizontalInput != 0 || verticalInput != 0) animator.SetFloat("speed", 1f, 0.05f, Time.deltaTime); // if player uses move key, smoothly change animation to run
-            else animator.SetFloat("speed", 0, 0.05f, Time.deltaTime);
+            else animator.SetFloat("speed", 0);            
         }
 
         private void Rotate() // rotate player to cursor direction

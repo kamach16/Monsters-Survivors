@@ -25,8 +25,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int spawnLayerIndex; // ground layer has index 6
     [SerializeField] private float numberOfSpawnPositionsOnEachSide;
 
-    [HideInInspector] public bool canSpawnMidGameEnemies = false;
-    [HideInInspector] public bool canSpawnLateGameEnemies = false;
+     public bool canSpawnMidGameEnemies = false;
+     public bool canSpawnLateGameEnemies = false;
 
     // values are in pixels of camera's resolution
     private List<Vector3> spawnPositionsOnTopSide = new List<Vector3>();
@@ -96,20 +96,19 @@ public class EnemySpawner : MonoBehaviour
 
     public void ChangeTimeBetweenSpawns()
     {
-        if (canSpawnMidGameEnemies) // from mid game, reduce the time between spawns
+        if (canSpawnLateGameEnemies) // from late game, reduce the time between spawns
         {
             timeBetweenEarlyGameEnemiesSpawns -= timeToReduceBetweenEnemiesSpawns;
             timeBetweenMidGameEnemiesSpawns -= timeToReduceBetweenEnemiesSpawns;
-
-            if (canSpawnLateGameEnemies) timeBetweenLateGameEnemiesSpawns -= timeToReduceBetweenEnemiesSpawns;
+            timeBetweenLateGameEnemiesSpawns -= timeToReduceBetweenEnemiesSpawns;
         }
     }
 
     private IEnumerator SpawnEarlyGameEnemy()
     {
-        if (!playerHealth.GetIsDead())
+        while (true)
         {
-            while (true)
+            if (!playerHealth.GetIsDead())
             {
                 int randomSpawnPosition = Random.Range(0, allSpawnPositions.Count);
                 int randomEnemyToSpawn = Random.Range(0, earlyGameEnemies.Length);
@@ -125,17 +124,17 @@ public class EnemySpawner : MonoBehaviour
                         Instantiate(earlyGameEnemies[randomEnemyToSpawn], worldSpawnPosition, Quaternion.identity);
                     }
                 }
-
-                yield return new WaitForSeconds(timeBetweenEarlyGameEnemiesSpawns);
             }
+
+            yield return new WaitForSeconds(timeBetweenEarlyGameEnemiesSpawns);
         }
     }
 
     private IEnumerator SpawnMidGameEnemy()
     {
-        if (canSpawnMidGameEnemies && !playerHealth.GetIsDead())
+        while (true)
         {
-            while (true)
+            if (canSpawnMidGameEnemies && !playerHealth.GetIsDead())
             {
                 int randomSpawnPosition = Random.Range(0, allSpawnPositions.Count);
                 int randomEnemyToSpawn = Random.Range(0, midGameEnemies.Length);
@@ -151,17 +150,17 @@ public class EnemySpawner : MonoBehaviour
                         Instantiate(midGameEnemies[randomEnemyToSpawn], worldSpawnPosition, Quaternion.identity);
                     }
                 }
-
-                yield return new WaitForSeconds(timeBetweenMidGameEnemiesSpawns);
             }
+
+            yield return new WaitForSeconds(timeBetweenMidGameEnemiesSpawns);
         }
     }
 
     private IEnumerator SpawnLateGameEnemy()
     {
-        if (canSpawnLateGameEnemies && !playerHealth.GetIsDead())
+        while (true)
         {
-            while (true)
+            if (canSpawnLateGameEnemies && !playerHealth.GetIsDead())
             {
                 int randomSpawnPosition = Random.Range(0, allSpawnPositions.Count);
                 int randomEnemyToSpawn = Random.Range(0, lateGameEnemies.Length);
@@ -177,9 +176,9 @@ public class EnemySpawner : MonoBehaviour
                         Instantiate(lateGameEnemies[randomEnemyToSpawn], worldSpawnPosition, Quaternion.identity);
                     }
                 }
-
-                yield return new WaitForSeconds(timeBetweenLateGameEnemiesSpawns);
             }
+
+            yield return new WaitForSeconds(timeBetweenLateGameEnemiesSpawns);
         }
     }
 

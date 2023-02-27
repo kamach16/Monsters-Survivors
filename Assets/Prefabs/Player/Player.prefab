@@ -1223,6 +1223,7 @@ MonoBehaviour:
   hitVFX: {fileID: 2984883245429483787}
   healthDisplay: {fileID: 0}
   gameManager: {fileID: 0}
+  objectAudio: {fileID: 345604131149629982}
 --- !u!114 &345604131149629982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1237,6 +1238,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 4858767760014531099}
   attackSound: {fileID: 8300000, guid: d8726ea55c79f4e498ad63d954605143, type: 3}
+  stepsSounds:
+  - {fileID: 8300000, guid: f6ce6da934597e542894816a1693c24c, type: 3}
+  - {fileID: 8300000, guid: f1db1309b9e0c2a4790c933247c21d4c, type: 3}
+  hpGainedSound: {fileID: 0}
+  powerUpGainedSound: {fileID: 0}
+  getDamageSound: {fileID: 8300000, guid: 2e317450fcf0f2f498a9d4ed15abc7c1, type: 3}
 --- !u!1 &3639246539127833945
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1313,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 518564267596963942}
     m_Modifications:
+    - target: {fileID: -1774971982056399306, guid: 156291ac5158ea24d979db8589aa1f50, type: 3}
+      propertyPath: objectAudio
+      value: 
+      objectReference: {fileID: 345604131149629982}
     - target: {fileID: -1774971982056399306, guid: 156291ac5158ea24d979db8589aa1f50, type: 3}
       propertyPath: playerHealth
       value: 

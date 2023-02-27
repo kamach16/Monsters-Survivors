@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Audio;
 
 namespace Player
 {
@@ -15,6 +16,7 @@ namespace Player
 
         [SerializeField] private HealthDisplay healthDisplay;
         [SerializeField] private GameManager gameManager;
+        [SerializeField] private ObjectAudio objectAudio;
 
         private Animator animator;
 
@@ -76,6 +78,7 @@ namespace Player
             UpdateHealth();
 
             hitVFX.Play();
+            objectAudio.PlayGetDamageSound();
 
             if (currentHealth <= 0)
             {

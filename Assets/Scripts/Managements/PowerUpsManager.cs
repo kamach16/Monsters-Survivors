@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Player;
+using Audio;
 
 public class PowerUpsManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PowerUpsManager : MonoBehaviour
     [SerializeField] private PlayerShooting playerShooting;
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private PlayerHealth playerHealth;
+    [SerializeField] private ObjectAudio objectAudio;
 
     [Header("Attack speed boost properties")]
     [SerializeField] private float attackSpeedToIncreaseInPercentage;
@@ -87,6 +89,7 @@ public class PowerUpsManager : MonoBehaviour
     {
         gameManager.ResumeGame(powerUpsContainer);
         levelUpEffect.Play();
+        objectAudio.PlayPowerUpGainedSound();
 
         switch (powerUpType)
         {
@@ -136,6 +139,8 @@ public class PowerUpsManager : MonoBehaviour
             default:
                 break;
         }
+
+        gameManager.SetPowerUpsContainerShowed(false);
     }
 
     public float ExtraXP(float initialXPToGain)

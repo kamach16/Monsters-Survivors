@@ -17,7 +17,7 @@ namespace Player
         [SerializeField] private GameObject projectilePrefab;
         [SerializeField] private Transform projectileSpawnPosition;
         [SerializeField] private PlayerHealth playerHealth;
-        [SerializeField] private CharacterAudio characterAudio;
+        [SerializeField] private ObjectAudio objectAudio;
 
         private Vector3 cursorPosition;
 
@@ -83,7 +83,7 @@ namespace Player
             while (true)
             {
                 GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPosition.position, projectileSpawnPosition.rotation);
-                characterAudio.PlayAttackSound();
+                objectAudio.PlayAttackSound();
 
                 PlayerRfileProjectile playerRfileProjectile = projectile.GetComponent<PlayerRfileProjectile>();
                 playerRfileProjectile.SetProjectileSpeed(projectileSpeed);

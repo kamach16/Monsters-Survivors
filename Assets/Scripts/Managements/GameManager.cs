@@ -12,9 +12,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject deathScreen;
     [SerializeField] private GameObject pauseScreen;
 
-    [HideInInspector] bool gamePaused = false;
+    [HideInInspector] public bool powerUpsContainerShowed = false;
 
     private bool canPauseGameByESC = true;
+    private bool gamePaused = false;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.B)) PlayerPrefs.DeleteAll();
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape) && !powerUpsContainerShowed)
         {
             if (canPauseGameByESC) PauseGame(pauseScreen);
             else ResumeGame(pauseScreen);
@@ -35,6 +36,11 @@ public class GameManager : MonoBehaviour
     public bool GetGamePaused()
     {
         return gamePaused;
+    }
+
+    public void SetPowerUpsContainerShowed(bool showed)
+    {
+        powerUpsContainerShowed = showed;
     }
 
     private void SetCursor()

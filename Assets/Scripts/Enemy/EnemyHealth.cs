@@ -1,5 +1,6 @@
 using UnityEngine;
 using Player;
+using Audio;
 
 namespace Enemy
 {
@@ -10,6 +11,7 @@ namespace Enemy
         [SerializeField] private float xpToGain;
         [SerializeField] private float scoreToGain;
         [SerializeField] private HealthDisplay healthDisplay;
+        [SerializeField] private ObjectAudio objectAudio;
 
         [Header("Hit Effect")]
         [SerializeField] private ParticleSystem hitVFX;
@@ -47,6 +49,7 @@ namespace Enemy
             healthDisplay.UpdateHealth(currentHealth, maxHealth);
 
             hitVFX.Play();
+            objectAudio.PlayGetDamageSound();
 
             if (currentHealth <= 0)
             {
