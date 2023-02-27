@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using Audio;
 
 namespace Player
 {
@@ -16,6 +17,7 @@ namespace Player
         [SerializeField] private GameObject projectilePrefab;
         [SerializeField] private Transform projectileSpawnPosition;
         [SerializeField] private PlayerHealth playerHealth;
+        [SerializeField] private CharacterAudio characterAudio;
 
         private Vector3 cursorPosition;
 
@@ -81,6 +83,7 @@ namespace Player
             while (true)
             {
                 GameObject projectile = Instantiate(projectilePrefab, projectileSpawnPosition.position, projectileSpawnPosition.rotation);
+                characterAudio.PlayAttackSound();
 
                 PlayerRfileProjectile playerRfileProjectile = projectile.GetComponent<PlayerRfileProjectile>();
                 playerRfileProjectile.SetProjectileSpeed(projectileSpeed);
