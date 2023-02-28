@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5529501743358746892}
   - component: {fileID: 3309440943155193314}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,7 +57,7 @@ GameObject:
   - component: {fileID: 4376657132610222105}
   - component: {fileID: 797939693695432636}
   - component: {fileID: 3239828270576206710}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PP_Tree_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}

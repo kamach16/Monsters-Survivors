@@ -1189,7 +1189,7 @@ MonoBehaviour:
   playerHealth: {fileID: 2535708990439270885}
   layersToIgnore:
     serializedVersion: 2
-    m_Bits: 909
+    m_Bits: 1073742733
 --- !u!114 &518564268822433753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,7 +1343,7 @@ PrefabInstance:
       objectReference: {fileID: 6687833320627409579, guid: 4f9d186a64e669345a84067941f729e7, type: 3}
     - target: {fileID: -1774971982056399306, guid: 156291ac5158ea24d979db8589aa1f50, type: 3}
       propertyPath: layersToIgnore.m_Bits
-      value: 909
+      value: 1073742733
       objectReference: {fileID: 0}
     - target: {fileID: -1774971982056399306, guid: 156291ac5158ea24d979db8589aa1f50, type: 3}
       propertyPath: timeBetweenProjectiles

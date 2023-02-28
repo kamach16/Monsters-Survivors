@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4922793842034896801}
   - component: {fileID: 4922793842034896804}
   - component: {fileID: 4922793842034896814}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -817,7 +817,7 @@ GameObject:
   - component: {fileID: 8719730140988834041}
   - component: {fileID: 462434782}
   - component: {fileID: 6380127411544072916}
-  m_Layer: 0
+  m_Layer: 30
   m_Name: HealthPickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,6 +1046,10 @@ PrefabInstance:
     - target: {fileID: 2335146607361664331, guid: 2b6bcf2401518af4493b871ae99b4ba7, type: 3}
       propertyPath: m_Name
       value: PickUpEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335146607361664331, guid: 2b6bcf2401518af4493b871ae99b4ba7, type: 3}
+      propertyPath: m_Layer
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2335146607362089575, guid: 2b6bcf2401518af4493b871ae99b4ba7, type: 3}
       propertyPath: m_RootOrder
