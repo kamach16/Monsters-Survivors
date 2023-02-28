@@ -8,6 +8,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float timeBetweenEarlyGameEnemiesSpawns;
     [SerializeField] private float timeBetweenMidGameEnemiesSpawns;
     [SerializeField] private float timeBetweenLateGameEnemiesSpawns;
+    [SerializeField] private float minTimeBetweenEarlyGameEnemiesSpawns;
+    [SerializeField] private float minTimeBetweenMidGameEnemiesSpawns;
+    [SerializeField] private float minTimeBetweenLateGameEnemiesSpawns;
     [SerializeField] private GameObject[] earlyGameEnemies;
     [SerializeField] private GameObject[] midGameEnemies;
     [SerializeField] private GameObject[] lateGameEnemies;
@@ -45,6 +48,11 @@ public class EnemySpawner : MonoBehaviour
         StartCoroutine("SpawnEarlyGameEnemy");
         StartCoroutine("SpawnMidGameEnemy");
         StartCoroutine("SpawnLateGameEnemy");
+    }
+
+    private void OnDrawGizmos()
+    {
+        ShowSpawnPositions();
     }
 
     private void SetVariables()
@@ -101,6 +109,10 @@ public class EnemySpawner : MonoBehaviour
             timeBetweenEarlyGameEnemiesSpawns -= timeToReduceBetweenEnemiesSpawns;
             timeBetweenMidGameEnemiesSpawns -= timeToReduceBetweenEnemiesSpawns;
             timeBetweenLateGameEnemiesSpawns -= timeToReduceBetweenEnemiesSpawns;
+
+            timeBetweenEarlyGameEnemiesSpawns = Mathf.Max(timeBetweenEarlyGameEnemiesSpawns, minTimeBetweenEarlyGameEnemiesSpawns);
+            timeBetweenMidGameEnemiesSpawns = Mathf.Max(timeBetweenMidGameEnemiesSpawns, minTimeBetweenMidGameEnemiesSpawns);
+            timeBetweenLateGameEnemiesSpawns = Mathf.Max(timeBetweenLateGameEnemiesSpawns, minTimeBetweenLateGameEnemiesSpawns);
         }
     }
 

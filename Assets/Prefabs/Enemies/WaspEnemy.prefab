@@ -856,7 +856,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2919553087738756319}
   m_LocalRotation: {x: 0.30095538, y: 0, z: 0, w: 0.9536382}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.026, z: -0.036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -873,7 +873,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5120338
+  m_Radius: 0.6
   m_Height: 1.9881768
   m_Direction: 1
   m_Center: {x: 0, y: 1.2045152, z: -0.44324785}
@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b098a3fb69e3f9642945651e64d3f886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 350
   currentHealth: 300
   xpToGain: 60
   scoreToGain: 150
@@ -1925,7 +1925,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7601078167108598785}
   m_LocalRotation: {x: 0.30095538, y: 0, z: 0, w: 0.9536382}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.04, z: -0.058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1942,7 +1942,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.32
+  m_Radius: 0.5
   m_Height: 1.8296511
   m_Direction: 1
   m_Center: {x: 0, y: 1.223966, z: -0.4999957}
