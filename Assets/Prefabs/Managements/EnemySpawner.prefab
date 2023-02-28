@@ -64,7 +64,7 @@ MonoBehaviour:
   - {fileID: 904956071992969736, guid: 37799c1b4aa46f646acb870646cdd08e, type: 3}
   requiredLevelToSpawnMidGameEnemies: 3
   requiredLevelToSpawnLateGameEnemies: 5
-  timeToReduceBetweenEnemiesSpawns: 0.15
+  timeToReduceBetweenEnemiesSpawns: 0.2
   playerHealth: {fileID: 0}
   spawnPositionOnTopSideYOffset: 150
   spawnPositionOnBottomSideYOffset: 700

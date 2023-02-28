@@ -763,7 +763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 350
-  currentHealth: 200
+  currentHealth: 350
   xpToGain: 60
   scoreToGain: 170
   healthDisplay: {fileID: 104154575}
