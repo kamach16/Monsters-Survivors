@@ -48,8 +48,8 @@ MonoBehaviour:
   timeBetweenMidGameEnemiesSpawns: 10
   timeBetweenLateGameEnemiesSpawns: 15
   minTimeBetweenEarlyGameEnemiesSpawns: 2
-  minTimeBetweenMidGameEnemiesSpawns: 5
-  minTimeBetweenLateGameEnemiesSpawns: 7
+  minTimeBetweenMidGameEnemiesSpawns: 4
+  minTimeBetweenLateGameEnemiesSpawns: 6
   earlyGameEnemies:
   - {fileID: 4218712588883033643, guid: 6c618f37ae1c5964795f181a5a81caf3, type: 3}
   - {fileID: 4082797269887551794, guid: 986fe79eb0d5cf64294433a48bd09d90, type: 3}

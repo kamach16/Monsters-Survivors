@@ -727,7 +727,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 148
+  m_VersionIndex: 202
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1013,7 +1013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpType: 0
-  healthToAdd: 30
+  healthToAdd: 15
   timeToActive: 60
   model: {fileID: 4922793842034896812}
   pickUpEffect: {fileID: 1777395221076846561}

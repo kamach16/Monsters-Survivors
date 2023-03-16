@@ -24,8 +24,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.B)) PlayerPrefs.DeleteAll();
-
         if(Input.GetKeyDown(KeyCode.Escape) && !powerUpsContainerShowed)
         {
             if (canPauseGameByESC) PauseGame(pauseScreen);
