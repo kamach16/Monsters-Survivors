@@ -75,7 +75,7 @@ namespace Player
 
         public void StopShooting()
         {
-            StopCoroutine(spawningProjectilesCoroutine);
+            StopAllCoroutines();
         }
 
         private IEnumerator StartSpawningProjectiles()

@@ -62,8 +62,8 @@ MonoBehaviour:
   lateGameEnemies:
   - {fileID: 3962332750182158917, guid: 0573d6cef619eff4b82a6aad2603b5e3, type: 3}
   - {fileID: 904956071992969736, guid: 37799c1b4aa46f646acb870646cdd08e, type: 3}
-  requiredLevelToSpawnMidGameEnemies: 3
-  requiredLevelToSpawnLateGameEnemies: 5
+  requiredLevelToSpawnMidGameEnemies: 4
+  requiredLevelToSpawnLateGameEnemies: 6
   timeToReduceBetweenEnemiesSpawns: 0.15
   playerHealth: {fileID: 0}
   spawnPositionOnTopSideYOffset: 150

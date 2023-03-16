@@ -26,13 +26,14 @@ namespace Player
                 return;
             }
 
-            if (Input.GetButtonDown("Fire1") && !gameManager.GetGamePaused())
+            if (Input.GetKeyDown(KeyCode.LeftControl) && !gameManager.GetGamePaused())
             {
                 currentWeapon.StartShooting();
             }
-            else if (Input.GetButtonUp("Fire1"))
+            else if (!Input.GetKey(KeyCode.LeftControl))
             {
                 currentWeapon.StopShooting();
+                print("stop");
             }
         }
     }

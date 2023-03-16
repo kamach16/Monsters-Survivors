@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   layersToIgnore:
     serializedVersion: 2
-    m_Bits: 1535
+    m_Bits: 3221229055
   maxDistanceToEnemyThatAllowsToBounceTheBullet: 5
   maxBouncies: 3
   projectileSpeed: 1
