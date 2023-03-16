@@ -25,7 +25,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private float spawnPositionOnBottomSideYOffset;
     [SerializeField] private float spawnPositionOnLeftAndRightSideXOffset;
 
-    [SerializeField] private int spawnLayerIndex; // ground layer has index 6
+    [SerializeField] private int spawnLayerIndex; // main ground layer has index 11
     [SerializeField] private float numberOfSpawnPositionsOnEachSide;
 
      public bool canSpawnMidGameEnemies = false;

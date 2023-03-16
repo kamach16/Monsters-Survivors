@@ -69,7 +69,7 @@ MonoBehaviour:
   spawnPositionOnTopSideYOffset: 150
   spawnPositionOnBottomSideYOffset: 700
   spawnPositionOnLeftAndRightSideXOffset: 600
-  spawnLayerIndex: 6
+  spawnLayerIndex: 11
   numberOfSpawnPositionsOnEachSide: 10
   canSpawnMidGameEnemies: 0
   canSpawnLateGameEnemies: 0
