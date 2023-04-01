@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] public float maxScore;
     [SerializeField] private ScoreDisplay scoreDisplay;
 
-    private void Awake()
+    private void Start()
     {
         maxScore = PlayerPrefs.GetFloat("maxScore");
 

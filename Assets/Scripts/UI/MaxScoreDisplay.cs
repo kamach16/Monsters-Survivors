@@ -10,11 +10,11 @@ public class MaxScoreDisplay : MonoBehaviour
 
     private void OnEnable()
     {
-        UpdateMaxScore(scoreManager.GetMaxScore());
+        Invoke("UpdateMaxScore", 0.001f);
     }
 
-    public void UpdateMaxScore(float maxScore) // execute when enemy is killed, score value is changing
+    public void UpdateMaxScore()
     {
-        maxScoreText.text = maxScore.ToString();
+        maxScoreText.text = scoreManager.GetMaxScore().ToString();
     }
 }
