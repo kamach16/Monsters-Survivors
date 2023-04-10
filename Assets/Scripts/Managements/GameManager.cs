@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape) && !powerUpsContainerShowed)
+        if (Input.GetKeyDown(KeyCode.Escape) && !powerUpsContainerShowed)
         {
             if (canPauseGameByESC) PauseGame(pauseScreen);
             else ResumeGame(pauseScreen);
