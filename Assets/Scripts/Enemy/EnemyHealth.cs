@@ -12,8 +12,6 @@ namespace Enemy
         [SerializeField] private float scoreToGain;
         [SerializeField] private HealthDisplay healthDisplay;
         [SerializeField] private ObjectAudio objectAudio;
-
-        [Header("Hit Effect")]
         [SerializeField] private ParticleSystem hitVFX;
 
         private PlayerWeapon playerWeapon;

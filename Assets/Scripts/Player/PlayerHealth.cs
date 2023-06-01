@@ -11,9 +11,7 @@ namespace Player
         [SerializeField] public float maxHealth;
         [SerializeField] private float currentHealth;
 
-        [Header("Hit Effect")]
         [SerializeField] private ParticleSystem hitVFX;
-
         [SerializeField] private HealthDisplay healthDisplay;
         [SerializeField] private GameManager gameManager;
         [SerializeField] private ObjectAudio objectAudio;

@@ -11,9 +11,7 @@ namespace Player
         [SerializeField] private float projectileSpeed;
         [SerializeField] public bool bouncingBullets = false;
         [SerializeField] private LayerMask layersToIgnore;
-
         [SerializeField] private Vector3 weaponRecoil;
-
         [SerializeField] private GameObject projectilePrefab;
         [SerializeField] private Transform projectileSpawnPosition;
         [SerializeField] private PlayerHealth playerHealth;

@@ -5,9 +5,9 @@ using Player;
 
 public class PlayerRfileProjectile : MonoBehaviour
 {
-    [SerializeField] private LayerMask layersToIgnore;
     [SerializeField] private float maxDistanceToEnemyThatAllowsToBounceTheBullet;
     [SerializeField] private int maxBouncies;
+    [SerializeField] private LayerMask layersToIgnore;
 
     [HideInInspector] public float projectileSpeed;
     [HideInInspector] public bool bouncingBullet = true;
@@ -15,8 +15,8 @@ public class PlayerRfileProjectile : MonoBehaviour
 
     private int bounciesAmount = 1;
 
-    public List<Collider> enemies = new List<Collider>();
-    public Transform nearbyEnemy;
+    private List<Collider> enemies = new List<Collider>();
+    private Transform nearbyEnemy;
 
     private void Update()
     {

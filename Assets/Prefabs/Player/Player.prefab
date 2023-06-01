@@ -1224,6 +1224,7 @@ MonoBehaviour:
   healthDisplay: {fileID: 0}
   gameManager: {fileID: 0}
   objectAudio: {fileID: 345604131149629982}
+  animator: {fileID: 518564268822433759}
 --- !u!114 &345604131149629982
 MonoBehaviour:
   m_ObjectHideFlags: 0

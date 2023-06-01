@@ -43,7 +43,6 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         SetVariables();
-        ClearSpawnPositions();
         SetAllSpawnPositions();
         StartCoroutine("SpawnEarlyGameEnemy");
         StartCoroutine("SpawnMidGameEnemy");
@@ -70,6 +69,8 @@ public class EnemySpawner : MonoBehaviour
 
     private void SetAllSpawnPositions()
     {
+        ClearSpawnPositions();
+
         SetTopSideSpawnPositions();
         SetBottomSideSpawnPositions();
         SetLeftSideSpawnPositions();
@@ -193,6 +194,8 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(timeBetweenLateGameEnemiesSpawns);
         }
     }
+
+    /////////////// SETTING SPAWNPOINTS SECTION //////////////
 
     private void SetTopSideSpawnPositions() // relative to camera's resolution
     {

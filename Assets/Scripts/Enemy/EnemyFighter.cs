@@ -7,7 +7,6 @@ namespace Enemy
 {
     public class EnemyFighter : MonoBehaviour
     {
-        [SerializeField] private EnemyType enemyType;
         [SerializeField] private float attackDamage;
         [SerializeField] public float attackRange;
         [SerializeField] private float timeBetweenAttacks;
@@ -24,19 +23,6 @@ namespace Enemy
         private GameObject player;
         private Animator animator;
         private PlayerHealth playerHealth;
-
-        enum EnemyType
-        {
-            skeleton,
-            slime,
-            spider,
-            frog,
-            wasp,
-            snake,
-            rat,
-            dragon,
-            triceratopsDinosaur
-        }
 
         private void Update()
         {
@@ -88,82 +74,10 @@ namespace Enemy
             enemyMovement.Stop();
             LookAtTarget();
 
-            switch (enemyType)
+            if (timeSinceLastAttack > timeBetweenAttacks)
             {
-                case EnemyType.skeleton:
-                    if(timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                case EnemyType.slime:
-                    if (timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                case EnemyType.spider:
-                    if (timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                case EnemyType.frog:
-                    if (timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                case EnemyType.wasp:
-                    if (timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                case EnemyType.snake:
-                    if (timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                case EnemyType.rat:
-                    if (timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                case EnemyType.dragon:
-                    if (timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                case EnemyType.triceratopsDinosaur:
-                    if (timeSinceLastAttack > timeBetweenAttacks)
-                    {
-                        animator.SetTrigger("attack");
-                        timeSinceLastAttack = 0;
-                    }
-                    break;
-
-                default:
-                    break;
+                animator.SetTrigger("attack");
+                timeSinceLastAttack = 0;
             }
         }
 
